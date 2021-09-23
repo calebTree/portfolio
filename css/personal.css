@@ -1,0 +1,273 @@
+div.myContainer {
+  /* color: blue; */
+  /* opacity: 0.5; */
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.rule {
+  display: table;
+}
+.rule>div {
+  display: table-cell;
+  white-space:nowrap;
+}
+.line>div {
+  border-bottom: 1px solid silver;
+  height: 1px;
+}
+.words {
+  padding: 0 5px;
+  /* text-transform: uppercase; */
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.line {
+  width: 50%;
+  vertical-align: middle;
+}
+
+
+/* electronics gallery style */
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.electronics-container {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto; 
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+h5 span {
+  background-color:#ffffff80;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: 10px 0 0px 0px #ffffff80, -10px 0 0px 0px #ffffff80;
+}
+
+/* WebP Support */
+.home-section {
+  background-image: url('../images/backgrounds/background_0.png');
+  background-size:cover;
+}
+.webp .home-section {
+  background-image: url('../images/backgrounds/background_0.webp');
+  background-size:cover;
+}
+.socials {
+  background-image: url('../images/backgrounds/background_12.jpg'); 
+  font-size: 28px;
+}
+.webp .socials {
+  background-image: url('../images/backgrounds/background_12.webp');
+  font-size: 28px;
+}
+.socials a {
+  color:#888
+}
+.socials a:hover {
+  color:#000
+}
+.portfolio-section {
+  background-image: url('../images/backgrounds/background_15.jpg');
+}
+.webp .portfolio-section {
+  background-image: url('../images/backgrounds/background_15.webp');
+}
+.ics311-btn {
+  font-weight: bold;
+  background-image:url('../images/button_art/ics311.jpg');
+  background-size:cover;
+}
+.webp .ics311-btn {
+  font-weight: bold;
+  background-image:url('../images/button_art/ics311.webp');
+  background-size:cover;
+}
+.csci2005-btn {
+  font-weight: bold; background-image:url('../images/button_art/csci2005.jpg'); background-size:cover;
+}
+.webp .csci2005-btn {
+  font-weight: bold; background-image:url('../images/button_art/csci2005.webp'); background-size:cover;
+}
+.bike-btn {
+  font-weight: bold; background-image:url('../images/button_art/bike.jpg'); background-size:cover;
+}
+.webp .bike-btn {
+  font-weight: bold; background-image:url('../images/button_art/bike.webp'); background-size:cover;
+}
+.code-bkgrnd {
+  background-image:url('../images/backgrounds/background_2_edited.jpg'); background-size:cover;
+}
+.webp .code-bkgrnd {
+  background-image:url('../images/backgrounds/background_2_edited.webp'); background-size:cover;
+}
+.ics325-btn {
+  font-weight: bold; background-image:url('../images/button_art/ics325.jpg'); background-size:cover;
+}
+.webp .ics325-btn {
+  font-weight: bold; background-image:url('../images/button_art/ics325.webp'); background-size:cover;
+}
+.electronics-section {
+  background-image: url('../images/backgrounds/stars.jpg'); background-size:100%;
+}
+.webp .electronics-section {
+  background-image: url('../images/backgrounds/stars.webp'); background-size:100%;
+}
+.contact-section {
+  background-image: url('../images/backgrounds/background_1.jpg'); background-size:cover; background-repeat: no-repeat;
+}
+.webp .contact-section {
+  background-image: url('../images/backgrounds/background_1.webp'); background-size:cover; background-repeat: no-repeat;
+}
+.footer-section {
+  background-image: url('../images/backgrounds/background_2.png'); background-size:cover;
+}
+.webp .footer-section {
+  background-image: url('../images/backgrounds/background_2.webp'); background-size:cover;
+}
+.services-section {
+  background-image: url('../images/backgrounds/background_3.png'); background-size:cover;
+}
+.webp .services-section {
+  background-image: url('../images/backgrounds/background_3.webp'); background-size:cover;
+}
+.about-me-section {
+  background-image: url('../images/backgrounds/background_19.jpg');
+}
+.webp .about-me-section {
+  background-image: url('../images/backgrounds/background_19.webp');
+}
+
+/* unvisited link */
+.link {
+  color: #000099;
+}
+
+/* visited link */
+.link:visited {
+  color: #666633;
+}
+
+/* mouse over link */
+.link:hover {  
+  color: darkslategrey;
+}
+
+/* selected link */
+.link:active {
+  color: darkslateblue;
+}
+
+/* portfolio headers */
+.portfolio-title {
+  padding: 10px; color: white; 
+  mix-blend-mode: difference;
+  font-family: 'Arbutus Slab';
+}
+
+/* drop button style */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block !important;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown .dropbtn {
+  cursor: pointer;
+}
+.show {
+  display: block;
+}
+
