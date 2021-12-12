@@ -153,33 +153,54 @@ h5 span {
 .webp .portfolio-section {
   background-image: url('../images/backgrounds/background_15.webp');
 }
+#ics370btn {
+  font-weight: bold;
+  background-image:url('../images/button_art/ics370.jpg');
+  background-size:cover;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  border: none;
+}
+#posts {
+  overflow: auto;
+}
 .ics311-btn {
   font-weight: bold;
   background-image:url('../images/button_art/ics311.jpg');
   background-size:cover;
+  border: none;
 }
 .webp .ics311-btn {
   font-weight: bold;
   background-image:url('../images/button_art/ics311.webp');
   background-size:cover;
+  border: none;
 }
 .csci2005-btn {
   font-weight: bold; background-image:url('../images/button_art/csci2005.jpg'); background-size:cover;
+  border: none;
 }
 .webp .csci2005-btn {
   font-weight: bold; background-image:url('../images/button_art/csci2005.webp'); background-size:cover;
+  border: none;
 }
 .bike-btn {
   font-weight: bold; background-image:url('../images/button_art/bike.jpg'); background-size:cover;
+  border: none;
 }
 .webp .bike-btn {
   font-weight: bold; background-image:url('../images/button_art/bike.webp'); background-size:cover;
+  border: none;
 }
 .code-bkgrnd {
   background-image:url('../images/backgrounds/background_2_edited.jpg'); background-size:cover;
 }
 .webp .code-bkgrnd {
   background-image:url('../images/backgrounds/background_2_edited.webp'); background-size:cover;
+}
+.code-bkgrnd2 {
+  background-image:url('../images/backgrounds/software.jpg'); background-size:cover;
 }
 .ics325-btn {
   font-weight: bold; background-image:url('../images/button_art/ics325.jpg'); background-size:cover;
