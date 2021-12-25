@@ -1,12 +1,7 @@
-import _ from 'lodash';
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+}
 
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+// import css
+function requireAll_css(r) { r.keys().forEach(r); }
+requireAll_css(require.context('./css', true, /\.css$/i));
