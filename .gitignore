@@ -1,4 +1,5 @@
 # webpack emitted
 public/bundles
 public/images
-bike_ride.html
+public/bike_ride.html
+public/index.html

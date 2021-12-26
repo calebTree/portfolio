@@ -4,14 +4,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
+    main: './src/index.js',
+    index: './src/index.html',
     bike: './src/bike_ride.html'
   },
   plugins: [
     new HtmlWebpackPlugin({
+      template: './src/index.html',
+      // inject: true,
+      chunks: ['index', 'main'],
+      filename: 'index.html'
+      // filename: '[contenthash:6].html'
+    }),
+    new HtmlWebpackPlugin({
       template: './src/bike_ride.html',
       // inject: true,
-      chunks: ['bike', 'index'],
+      chunks: ['bike', 'main'],
       filename: 'bike_ride.html'
       // filename: '[contenthash:6].html'
     }),
@@ -52,7 +60,7 @@ module.exports = {
               // The `attribute` argument contains a name of the HTML attribute.
               // The `value` argument contains a value of the HTML attribute.
               // The `resourcePath` argument contains a path to the loaded HTML file.
-              if (/\/$/.test(value)) {
+              if (/\.js$/.test(value) || /\.css$/.test(value) || /\.html$/.test(value) || /\/$/.test(value)) {
                 return false;
               }
               return true;
