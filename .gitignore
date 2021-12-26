@@ -1,5 +1,5 @@
 # webpack emitted
 public/bundles
 public/images
-public/bike_ride.html
-public/index.html
+public/*.html
+public/favicon.ico

@@ -6,21 +6,53 @@ module.exports = {
   entry: {
     main: './src/index.js',
     index: './src/index.html',
-    bike: './src/bike_ride.html'
+    bike: './src/bike_ride.html',
+    cipher: './src/caesar-cipher.html',
+    enviro: './src/environment.html',
+    mac: './src/macintosh.html',
+    xbox: './src/xbox.html'
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      // inject: true,
+      favicon: './src/images/favicon.ico',
       chunks: ['index', 'main'],
       filename: 'index.html'
       // filename: '[contenthash:6].html'
     }),
     new HtmlWebpackPlugin({
       template: './src/bike_ride.html',
-      // inject: true,
+      favicon: './src/images/favicon.ico',
       chunks: ['bike', 'main'],
       filename: 'bike_ride.html'
+      // filename: '[contenthash:6].html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/caesar-cipher.html',
+      favicon: './src/images/favicon.ico',
+      chunks: ['cipher', 'main'],
+      filename: 'caesar-cipher.html'
+      // filename: '[contenthash:6].html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/environment.html',
+      favicon: './src/images/favicon.ico',
+      chunks: ['enviro', 'main'],
+      filename: 'environment.html'
+      // filename: '[contenthash:6].html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/macintosh.html',
+      favicon: './src/images/favicon.ico',
+      chunks: ['mac', 'main'],
+      filename: 'macintosh.html'
+      // filename: '[contenthash:6].html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/xbox.html',
+      favicon: './src/images/favicon.ico',
+      chunks: ['xbox', 'main'],
+      filename: 'xbox.html'
       // filename: '[contenthash:6].html'
     }),
   ],
