@@ -47,22 +47,21 @@ requireAll_css(require.context('./css', true, /\.css$/i));
 //#region scroll to top button
 // Get the button
 let mybutton = document.getElementsByClassName("to-top");
-mybutton[0].onclick = topFunction;
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton[0].style.display = "block";
-    } else {
-        mybutton[0].style.display = "none";
+if(mybutton[0]) {
+    mybutton[0].onclick = topFunction;
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton[0].style.display = "block";
+        } else {
+            mybutton[0].style.display = "none";
+        }
     }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 }
 //#endregion
