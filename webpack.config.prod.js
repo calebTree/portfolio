@@ -1,8 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// css
+const TerserJSPlugin = require('terser-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
     main: './src/index.js',
     index: './src/index.html',
@@ -55,17 +60,30 @@ module.exports = {
       filename: 'xbox.html'
       // filename: '[contenthash:6].html'
     }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name]-[contenthash:6].css',
+      // chunkFilename: 'css/[chunkhash].css',
+    }),
   ],
   output: {
     filename: './bundles/[name].js',
     path: path.resolve(__dirname, 'public'),
     assetModuleFilename: 'images/[base]',
+    // clean: true
   },
   module: {
     rules: [
       {
         test: /.s?css$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            },
+          },
+          'css-loader', 'sass-loader',
+        ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -101,5 +119,26 @@ module.exports = {
         },
       },
     ],
+  },
+  optimization: {
+    moduleIds: 'deterministic',
+    minimizer: [
+      new TerserJSPlugin({}),
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+      `...`,
+      new CssMinimizerPlugin({
+        test: /\.css$/i,
+      }),
+    ],
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
   },
 };
