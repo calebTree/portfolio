@@ -40,25 +40,21 @@ module.exports = {
               // All default supported tags and attributes
               "...",
               {
-                tag: "img",
-                attribute: "data-src",
+                // Tag name
+                tag: "a",
+                // Attribute name
+                attribute: "href",
+                // Type of processing, can be `src` or `scrset`
                 type: "src",
-              },
-              {
-                tag: "img",
-                attribute: "data-srcset",
-                type: "srcset",
               },
             ],
             urlFilter: (attribute, value, resourcePath) => {
               // The `attribute` argument contains a name of the HTML attribute.
               // The `value` argument contains a value of the HTML attribute.
               // The `resourcePath` argument contains a path to the loaded HTML file.
-
-              if (/\.css$/i.test(value)) {
+              if (/\/$/.test(value)) {
                 return false;
               }
-
               return true;
             },
           },
