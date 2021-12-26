@@ -1,11 +1,14 @@
 html {
     overflow-x: hidden;
+    /* box-sizing: border-box; */
 }
 body {
     line-height: 1.7;
     color: #666;
     font-weight: 400;
     font-size: 1rem;
+    margin: 0;
+    font-family: Arial;
 }
 ::-moz-selection {
     background: #000;
@@ -23,16 +26,7 @@ a {
 a:hover {
     text-decoration: none;
 }
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-h1,
-h2,
-h3,
-h4,
-h5 {
+.h1, .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 {
     font-family: Arbutus Slab, serif;
     color: #000;
 }
@@ -74,9 +68,7 @@ body:after {
     border-radius: 30px;
     padding: 10px 30px;
 }
-.btn:active,
-.btn:focus,
-.btn:hover {
+.btn:active, .btn:focus, .btn:hover {
     outline: none;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -153,10 +145,7 @@ body:after {
 .site-footer p {
     color: #737373;
 }
-.site-footer h2,
-.site-footer h3,
-.site-footer h4,
-.site-footer h5 {
+.site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5 {
     color: #fff;
 }
 .site-footer a {

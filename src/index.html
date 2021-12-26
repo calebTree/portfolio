@@ -2,14 +2,9 @@
 <html lang="en">
 
 <head>
-  <title>Caleb D Anderson &mdash; Portfolio</title>
+  <title>Caleb D Anderson - Portfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- inline-webp -->
-  <script>
-    !function (document) { "use strict"; var webpImage, avifImage = "data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAF0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgS0AAAAAABNjb2xybmNseAACAAIAAIAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAGVtZGF0EgAKBzgAPtAgIAkyUBAAAPWc41TP///4gHBX9H8XVK7gGeDllq8TYARA+8Tfsv7L+zPE24eIoIzE0WhHbrqcrTK9VEgEG/hwgB5rdCbvP8g3KYPdV88CvPJnptgQ", webpClass = "webp", avifClass = "avif"; function alreadyTested(format) { if (window.sessionStorage) { var test = window.sessionStorage.getItem(format + "Support"); if ("false" === test || "true" === test) return "true" === test } return null } function testFormat(format, imageSrc, callback) { var tested = alreadyTested(format); if (null === tested) { var image = new Image; return image.onload = image.onerror = function () { callback(format, 2 === image.height) }, void (image.src = imageSrc) } addClass(format, tested) } function addClass(format, support) { if (support) { var el = document.documentElement; el.classList ? el.classList.add("webp" === format ? "webp" : "avif") : el.className += " " + format == "webp" ? "webp" : "avif", window.sessionStorage.setItem(format + "Support", !0) } else window.sessionStorage.setItem(format + "Support", !1) } testFormat("webp", "data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA", addClass), testFormat("avif", avifImage, addClass) }(document);
-  </script>
 
   <!-- style sheets -->
   <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab|Open+Sans:300,400,700" rel="stylesheet">
@@ -20,45 +15,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
-
+  <!-- shrug -->
   <script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async></script>
-
-  <style>
-    .quick-butn {
-      margin: 5px;
-    }
-
-    .electric-image {
-      position: relative;
-      text-align: center;
-      color: white;
-      margin-bottom: 5px;
-    }
-
-    .electric-caption {
-      position: absolute;
-      font-size: 2.25vw;
-      bottom: 8px;
-      left: 16px;
-      margin-right: 16px;
-      background-color: grey;
-      text-align: left;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    /* form field invalid style */
-    .input-group span {
-      color: red;
-      padding: 5px;
-      display: block;
-    }
-  </style>
 </head>
 
 <!-- begin body -->
-
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
   <div class="site-wrap">
     <div class="site-mobile-menu site-navbar-target">
@@ -75,7 +36,7 @@
       style="background-color:rgba(255, 255, 255, 0.65);">
       <div class="container-fluid">
         <div class="row align-items-center justify-content-center">
-          <div class="">
+          <div>
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="#home-section" class="nav-link">Home</a></li>
@@ -141,39 +102,13 @@
         </div>
       </div>
     </header>
-    <style>
-      .face-caption {
-        user-select: none;
-        opacity: 85%;
-        position: absolute;
-        font-size: 16px;
-        bottom: 30px;
-        right: 25px;
-        background-color: grey;
-        padding-left: 5px;
-        padding-right: 5px;
-        z-index: 10;
-      }
 
-      @media screen and (min-width: 320px) {
-        .face-caption {
-          font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-        }
-      }
-
-      @media screen and (min-width: 1000px) {
-        .face-caption {
-          font-size: 22px;
-          bottom: 100px;
-        }
-      }
-    </style>
     <div class="site-blocks-cover overlay bg-light myContainer home-section" id="home-section">
       <div class="container">
         <picture>
           <source type="image/webp" srcset="images/faces/391ff6531e3c71dd47299aae5344036f.webp">
           <source type="image/png" srcset="images/faces/face_edit.png">
-          <img src="images/faces/face_edit.png" alt="splash face" class="img-face" width="" height="">
+          <img src="images/faces/face_edit.png" alt="splash face" class="img-face" width="1024" height="768">
           <div class="face-caption">2018 - selfie</div>
         </picture>
         <div class="row justify-content-center">
@@ -220,9 +155,6 @@
                         clip-rule="evenodd" />
                     </svg></a>
                 </div>
-                <div class="quick-butn">
-                  <a href="#" class="btn btn-primary btn-lg" style="pointer-events: none">IRC Network</a>
-                </div>
                 <div class="dropdown quick-butn">
                   <button onclick="menu(this)" class="dropbtn btn btn-primary btn-lg dropdown-toggle">Forensics</button>
                   <div class="dropdown-content">
@@ -234,8 +166,7 @@
 
               <div class="row justify-content-center">
                 <div class="quick-butn">
-                  <a href="https://stats.foldingathome.org/donor/129483" target="_blank"
-                    class="btn btn-primary btn-lg"><img src="images/f@h.png"> F@H Stats
+                  <a href="https://stats.foldingathome.org/donor/129483" target="_blank" class="btn btn-primary btn-lg"><img id="icon" alt="f@h icon" src="images/f@h.png" width="16" height="16">My F@H Stats
                     <svg class="bi bi-box-arrow-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd"
@@ -657,7 +588,7 @@
         </div>
       </div>
       <!-- Container for the image gallery -->
-      <div class="electronics-container" style="width:65%;">
+      <div class="electronics-container">
         <!-- Image text -->
         <div class="caption-container">
           <p id="caption"></p>
@@ -671,10 +602,12 @@
               <source type="image/jpeg" srcset="images/electronics/arduino.jpg">
               <img src="images/electronics/arduino.jpg" alt="Image" style="width:100%">
             </picture>
-            <div class="electric-caption" style="font-size:2.25vw;">An <a class="link" target="_blank"
-                href="https://www.arduino.cc/">Arduino</a> project I completed in 2017 involving soldering, programming,
-              and the breadboard circuit.</div>
+            <div class="electric-caption">An <a class="link" target="_blank"
+              href="https://www.arduino.cc/">Arduino</a> project I completed in 2017 involving soldering, programming,
+              and the breadboard circuit.
+            </div>
           </div>
+
         </div>
 
         <div class="mySlides">
