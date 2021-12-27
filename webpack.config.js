@@ -12,6 +12,17 @@ module.exports = {
     mac: './src/macintosh.html',
     xbox: './src/xbox.html'
   },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
+    client: {
+      progress: true,
+      overlay: true,
+    },
+    compress: true,
+    port: 9000,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
