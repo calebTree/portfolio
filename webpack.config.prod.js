@@ -6,6 +6,10 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
+// images
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+
+
 module.exports = {
   mode: 'production',
   entry: {
@@ -74,6 +78,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        type: "asset",
+      },
+      {
         test: /.s?css$/i,
         use: [
           {
@@ -82,12 +90,17 @@ module.exports = {
               publicPath: '../'
             },
           },
-          'css-loader', 'sass-loader',
+          {
+            loader: "css-loader",
+            options: {
+              url: {
+                // https://github.com/webpack-contrib/css-loader/issues/1342
+                // skip any data URLs of type image/svg+xml
+                filter: (url) => !(url.startsWith("data:image/svg+xml"))
+              }
+            }
+          }, 'sass-loader',
         ],
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
       },
       {
         test: /\.html$/i,
@@ -97,6 +110,7 @@ module.exports = {
             list: [
               // All default supported tags and attributes
               "...",
+              // process anchors to images (in bike_ride.html)
               {
                 // Tag name
                 tag: "a",
@@ -121,7 +135,6 @@ module.exports = {
     ],
   },
   optimization: {
-    moduleIds: 'deterministic',
     minimizer: [
       new TerserJSPlugin({}),
       // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
@@ -129,16 +142,38 @@ module.exports = {
       new CssMinimizerPlugin({
         test: /\.css$/i,
       }),
-    ],
-    runtimeChunk: 'single',
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.imageminGenerate,
+          options: {
+            // Lossless optimization with custom option
+            // Feel free to experiment with options for better result for you
+            plugins: [
+              ["gifsicle", { interlaced: true }],
+              ["jpegtran", { progressive: true }],
+              ["optipng", { optimizationLevel: 5 }],
+              // Svgo configuration here https://github.com/svg/svgo#configuration
+              [
+                "svgo",
+                {
+                  name: 'preset-default',
+                  params: {
+                    overrides: {
+                      // customize default plugin options
+                      inlineStyles: {
+                        onlyMatchedOnce: false,
+                      },
+            
+                      // or disable plugins
+                      removeDoctype: false,
+                    },
+                  },
+                }
+              ],
+            ],
+          },
         },
-      },
-    },
+      }),
+    ],
   },
 };
