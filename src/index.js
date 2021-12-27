@@ -5,6 +5,7 @@ if (process.env.NODE_ENV !== 'production') {
 // import css
 function requireAll_css(r) { r.keys().forEach(r); }
 requireAll_css(require.context('./css', true, /\.css$/i));
+require('./fonts/icomoon/style.css');
 
 //#region apply webp class when supported (backgrounds)
 !(function (document) {

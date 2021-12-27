@@ -68,9 +68,9 @@ module.exports = {
     }),
   ],
   output: {
-    filename: './bundles/[name].js',
+    filename: './bundles/[name]-[contenthash:6].js',
     path: path.resolve(__dirname, 'public'),
-    assetModuleFilename: 'images/[base]',
+    assetModuleFilename: 'assets/[name]-[contenthash:6][ext]',
   },
   module: {
     rules: [
