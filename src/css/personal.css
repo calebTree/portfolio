@@ -75,9 +75,7 @@
   border-radius: 50px;
   border: none;
 }
-#posts {
-  overflow: auto;
-}
+
 .ics311-btn {
   font-weight: bold;
   background-image:url('../images/button_art/ics311.jpg');
@@ -423,3 +421,4 @@ pre > code {
 blockquote a {
   align-items: inherit;
 }
+
