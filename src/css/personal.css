@@ -78,7 +78,7 @@
 
 .ics311-btn {
   font-weight: bold;
-  background-image:url('../images/button_art/ics311.jpg');
+  background-image:url('../images/button_art/ics311.png');
   background-size:cover;
   border: none;
 }
@@ -89,7 +89,7 @@
   border: none;
 }
 .csci2005-btn {
-  font-weight: bold; background-image:url('../images/button_art/csci2005.jpg'); background-size:cover;
+  font-weight: bold; background-image:url('../images/button_art/csci2005.png'); background-size:cover;
   border: none;
 }
 .webp .csci2005-btn {
@@ -97,7 +97,7 @@
   border: none;
 }
 .bike-btn {
-  font-weight: bold; background-image:url('../images/button_art/bike.jpg'); background-size:cover;
+  font-weight: bold; background-image:url('../images/button_art/bike.png'); background-size:cover;
   border: none;
 }
 .webp .bike-btn {
@@ -114,7 +114,7 @@
   background-image:url('../images/backgrounds/software.jpg'); background-size:cover;
 }
 .ics325-btn {
-  font-weight: bold; background-image:url('../images/button_art/ics325.jpg'); background-size:cover;
+  font-weight: bold; background-image:url('../images/button_art/ics325.png'); background-size:cover;
 }
 .webp .ics325-btn {
   font-weight: bold; background-image:url('../images/button_art/ics325.webp'); background-size:cover;
