@@ -17,7 +17,7 @@ function menu(target) {
 
 // close all dropwdowns from click anywhere
 window.onclick = function (event) {
-	if (!event.target.closest('.dropbtn')) {
+	if (!event.target.closest('.dropdown')) {
 		let dropdowns = document.getElementsByClassName("dropdown-content");
 		for (let i = 0; i < dropdowns.length; i++) {
 			let openDropdown = dropdowns[i];
