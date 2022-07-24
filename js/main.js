@@ -4,30 +4,6 @@ AOS.init({
 	once: false
 });
 
-function menu(target) {
-	// cloes previously open menu
-	const prevDropDown = document.getElementsByClassName("show");
-	if(prevDropDown.length > 0) {
-		prevDropDown[0].classList.remove('show');
-	}
-	// open selected menu
-	$this = $(target)
-	$this.next().toggleClass("show");
-}
-
-// close all dropwdowns from click anywhere
-window.onclick = function (event) {
-	if (!event.target.closest('.dropdown')) {
-		let dropdowns = document.getElementsByClassName("dropdown-content");
-		for (let i = 0; i < dropdowns.length; i++) {
-			let openDropdown = dropdowns[i];
-			if (openDropdown.classList.contains('show')) {
-				openDropdown.classList.remove('show');
-			}
-		}
-	}
-}
-
 jQuery(document).ready(function ($) {
 	"use strict";
 	var siteMenuClone = function () {
